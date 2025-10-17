@@ -1,0 +1,296 @@
+:root {
+  --orange: #ff7a00;
+  --dark: #07010a;
+  --accent: #ffb347;
+}
+
+/* BASE */
+body {
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: radial-gradient(circle at center, #0a0a0f 0%, #030303 100%);
+  color: #f1f1f1;
+  overflow-x: hidden;
+}
+
+.ff-orbit {
+  font-family: "Orbitron", sans-serif;
+  letter-spacing: 1px;
+}
+
+/* GRID BACKGROUND OVERLAY */
+.bg-grid::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 60px 60px;
+  opacity: 0.25;
+  z-index: -1;
+}
+
+/* NEON + FLICKER EFFECT */
+@keyframes neon-flicker {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% { opacity: 1; }
+  20%, 24%, 55% { opacity: 0.6; }
+}
+.neon {
+  color: var(--orange);
+  text-shadow:
+    0 0 5px var(--orange),
+    0 0 15px var(--orange),
+    0 0 25px rgba(255, 122, 0, 0.6),
+    0 0 45px rgba(255, 122, 0, 0.4);
+  animation: neon-flicker 3s infinite;
+}
+
+/* HEADER / NAVBAR */
+header {
+  backdrop-filter: blur(12px);
+  background: rgba(0, 0, 0, 0.6);
+  border-bottom: 1px solid rgba(255, 122, 0, 0.2);
+}
+nav a {
+  transition: 0.3s ease;
+}
+nav a:hover {
+  text-shadow: 0 0 10px var(--orange);
+  color: var(--orange);
+}
+
+/* HERO SECTION */
+.hero-section {
+  background:
+    radial-gradient(circle at center, rgba(255, 122, 0, 0.05), transparent 70%),
+    url('/assets/gira-grid.png') center/cover no-repeat,
+    linear-gradient(to bottom, rgba(10, 10, 10, 0.9), rgba(10, 10, 10, 0.3));
+  text-align: center;
+}
+.hero-section h1 {
+  font-size: clamp(2.5rem, 6vw, 6rem);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  animation: neon-flicker 4s infinite;
+}
+
+/* CARDS */
+.card-glow {
+  position: relative;
+  overflow: hidden;
+  background: rgba(25, 25, 25, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 1rem;
+  backdrop-filter: blur(4px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card-glow:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 20px rgba(255, 122, 0, 0.3);
+  border-color: rgba(255, 122, 0, 0.5);
+}
+
+/* BUTTONS */
+.btn-hover {
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+.btn-hover:hover {
+  background-color: var(--orange) !important;
+  color: #080808 !important;
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255, 122, 0, 0.6);
+}
+
+/* MOBILE MENU */
+.mobile-menu-container {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
+  background: rgba(0, 0, 0, 0.9);
+}
+.mobile-menu-container.open {
+  max-height: 500px;
+}
+
+/* REVEAL ANIMATION */
+.reveal {
+  opacity: 0;
+  transform: translateY(8px);
+  transition: all 0.6s ease;
+}
+.reveal.show {
+  opacity: 1;
+  transform: none;
+}
+
+/* LIGHTBOX */
+#lightbox {
+  transition: opacity 0.4s ease;
+}
+.lb-open {
+  display: flex !important;
+  opacity: 1;
+}
+
+/* BACK TO TOP */
+#toTop {
+  display: none;
+  transition: 0.3s;
+}
+#toTop:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(255, 122, 0, 0.6);
+}
+
+/* FOOTER */
+footer {
+  background: linear-gradient(to top, rgba(255, 122, 0, 0.05), transparent);
+  border-top: 1px solid rgba(255, 122, 0, 0.3);
+}
+
+/* SCROLLBAR CUSTOM */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #111;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--orange);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ff9a33;
+}
+
+/* PARTICLE CANVAS */
+#particles-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+  background: transparent;
+}
+
+/* REMOVE OLD GRID BACKGROUND */
+.bg-grid::before { display: none; }
+
+/* HERO SECTION WITH DRAGON BALLS */
+.hero-section {
+  position: relative;
+  overflow: hidden;
+  background: radial-gradient(circle at center, rgba(255, 122, 0, 0.05), transparent 70%), 
+              linear-gradient(to bottom, rgba(10,10,10,0.9), rgba(10,10,10,0.3));
+}
+
+.dragonball {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: radial-gradient(circle at 30% 30%, #ffcc66, #ff7a00 80%);
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(255, 122, 0, 0.6);
+  opacity: 0.8;
+  /*animation: floatBall 8s ease-in-out infinite;*/ /*animação das esferas*/
+}
+
+
+/* Esfera com 1 estrela - CENTRALIZADA */
+.ball1::after {
+  content: "★";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  color: rgb(255, 51, 51);
+  opacity: 0.9;
+  text-shadow: 0 0 5px #ff0;
+}
+
+/* Esfera com 2 estrelas - LADO A LADO */
+.ball2::after {
+  content: "★ ★";
+  position: absolute;
+  top: 70%;
+  left: 20%;
+  rotate: 45deg;
+  transform: translate(-50%, -50%);
+  font-size: 16px;
+  color: rgb(255, 51, 51);
+  opacity: 0.9;
+  text-shadow: 0 0 5px #ff0;
+  letter-spacing: 8px;
+}
+
+/* Esfera com 3 estrelas - 2 EM CIMA, 1 EMBAIXO */
+.ball3::before {
+  content: "★ ★";
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 14px;
+  color:rgb(255, 51, 51);
+  opacity: 0.9;
+  text-shadow: 0 0 5px #ff0;
+  letter-spacing: 6px;
+}
+
+.ball3::after {
+  content: "★";
+  position: absolute;
+  top: 50%;
+  left: 15%;
+  transform: translate(-50%, -50%);
+  font-size: 14px;
+  color: rgb(255, 51, 51);
+  opacity: 0.9;
+  text-shadow: 0 0 5px #ff0;
+}
+
+/* Esfera com 4 estrelas - 2 EM CIMA, 2 EMBAIXO */
+.ball4::before {
+  content: "★ ★";
+  position: absolute;
+  top: 30%;
+  left: 55%;
+  transform: translate(0%, 0%);
+  font-size: 12px;
+  color: rgb(255, 51, 51);
+  opacity: 0.9;
+  text-shadow: 0 0 5px #ff0;
+  letter-spacing: 50px;
+}
+
+.ball4::after {
+  content: "★★";
+  position: absolute;
+  top: 60%;
+  left: 75%;
+  transform: translate(-50%,-50%);
+  font-size: 12px;
+  color: rgb(255, 51, 51);
+  opacity: 0.9;
+  text-shadow: 0 0 5px #ff0;
+  letter-spacing: 15px;
+}
+
+
+@keyframes floatBall {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(180deg); }
+}
+
+/* POSITION DIFFERENT BALLS */
+.ball1 { top: 10%; left: 20%; animation-delay: 0s; }
+.ball2 { top: 30%; right: 25%; animation-delay: 1.5s; }
+.ball3 { bottom: 20%; left: 35%; animation-delay: 2.5s; }
+.ball4 { bottom: 15%; right: 30%; animation-delay: 3.5s; }
+
+
+

@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Gira Geek 2025 | 24-26 Outubro — SESC Garanhuns</title>
+  <meta name="description" content="Gira Geek 2025 — Festival geek no Centro Cultural SESC Garanhuns. Painéis, cosplay, games, quadrinhos e muito mais. Ingressos disponíveis." />
+  <!-- Open Graph (substitua og:image por URL real se tiver) -->
+  <meta property="og:title" content="Gira Geek 2025" />
+  <meta property="og:description" content="24-26 Outubro — SESC Garanhuns. Garanta seu ingresso!" />
+  <meta property="og:image" content="https://via.placeholder.com/1200x630.png?text=Gira+Geek+2025" />
+  <meta name="theme-color" content="#FF7A00"/>
+   <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Style CSS -->
+  <link rel="stylesheet" href="assets/style.css" />
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+
+</head>
+<body class="bg-grid text-gray-100 min-h-screen">
+
+  <!-- NAV -->
+  <header class="sticky top-0 w-full z-50 bg-gradient-to-b from-black/60 via-black/40 to-transparent">
+    <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <a href="#home" class="flex items-center gap-3">
+        <div class="w-12 h-12 rounded-full flex items-center justify-center bg-orange-400 text-black ff-orbit font-bold">GG</div>
+        <div>
+          <div class="ff-orbit font-extrabold text-lg">Gira Geek <span class="text-sm text-orange-300">2025</span></div>
+          <div class="text-xs text-gray-400">24 • 25 • 26 Outubro — SESC Garanhuns</div>
+        </div>
+      </a>
+
+      <div class="hidden md:flex items-center gap-6">
+        <a class="hover:underline" href="#atracoes">Atrações</a>
+        <a class="hover:underline" href="#programacao">Programação</a>
+        <a class="hover:underline" href="#ingressos">Ingressos</a>
+        <a class="hover:underline" href="#faq">FAQ</a>
+        <a class="hover:underline" href="#contato">Contato</a>
+        <a href="https://wa.me/5587999540320?text=Ol%C3%A1%20quero%20comprar%20ingressos%20GiraGeek%202025" target="_blank"
+           class="px-4 py-2 rounded-md ff-orbit font-bold neon" style="background:var(--orange); color:#080808;">Comprar</a>
+      </div>
+
+      <!-- mobile menu button -->
+      <div class="md:hidden">
+        <button id="hambtn" class="p-2 rounded-md border border-white/10">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile menu (pushes content down) -->
+  <div id="mobileMenuContainer" class="mobile-menu-container md:hidden bg-black/90">
+    <div class="max-w-6xl mx-auto px-4 py-4">
+      <div class="flex flex-col gap-2">
+        <a class="block px-3 py-2 rounded-md hover:bg-white/5" href="#atracoes">Atrações</a>
+        <a class="block px-3 py-2 rounded-md hover:bg-white/5" href="#programacao">Programação</a>
+        <a class="block px-3 py-2 rounded-md hover:bg-white/5" href="#ingressos">Ingressos</a>
+        <a class="block px-3 py-2 rounded-md hover:bg-white/5" href="#faq">FAQ</a>
+        <a class="block px-3 py-2 rounded-md hover:bg-white/5" href="#contato">Contato</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <main id="home">
+    <section class=" hero-section min-h-screen flex flex-col justify-center items-center text-center px-6 py-16 text-white">
+      <div class="dragonball ball1"></div>
+      <div class="dragonball ball2"></div>
+      <div class="dragonball ball3"></div>
+      <div class="dragonball ball4"></div>
+      <div class="max-w-3xl">
+        <!-- Título -->
+        <h1 class=" text-5xl sm:text-6xl md:text-7xl ff-orbit font-extrabold neon glitch">
+          Gira Geek <span class="text-orange-300">2025</span>
+        </h1>
+
+        <!-- Descrição -->
+        <p class="mt-4 text-gray-300 card-glow">
+          O maior encontro geek da região — painéis, estandes, jogos, cosplay e muito mais. 
+          <strong>24, 25 e 26 de Outubro</strong> no 
+          <strong>Centro Cultural SESC Garanhuns</strong>.
+        </p>
+
+        <!-- Botões -->
+        <div class="mt-6 flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="#ingressos" class="px-6 py-3 ff-orbit font-bold rounded-md neon btn-hover" style="background:var(--orange); color:#080808;">Comprar Ingresso</a>
+          <a href="#programacao" class="px-6 py-3 rounded-md border border-white/10 btn-hover">Ver Programação</a>
+        </div>
+
+        <!-- Contagem regressiva -->
+        <div class="mt-8 p-4 rounded-xl card-glow inline-block">
+          <div class="text-sm text-gray-400">Faltam</div>
+          <div id="countdown" class="text-2xl font-bold mt-1 ff-orbit">--d --h --m --s</div>
+        </div>
+
+        <!-- Info ingressos -->
+        <div class="mt-6 text-sm text-gray-200 font-bold text-center ">
+          <div class="block md:hidden">
+            <div>Ingressos: Inteira R$50</div>
+            <div>Social R$30 + 1kg alimento</div>
+            <div>Meia R$25 • Comerciário R$25</div>
+          </div>
+          <div class="hidden md:block">
+            Ingressos: Inteira R$50 • Social R$30 + 1kg alimento • Meia R$25 • Comerciário R$25
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ATRAÇÕES -->
+    <section id="atracoes" class="max-w-6xl mx-auto px-6 lg:px-8 py-12">
+      <h2 class="text-3xl ff-orbit font-extrabold mb-3 reveal">Atrações Confirmadas</h2>
+      <p class="text-gray-300 mb-6 max-w-2xl reveal">Destaques do evento — palestras, convidados, concursos e estandes.</p>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- card sample -->
+        <article class="p-4 rounded-xl card-glow reveal group">
+          <div class="h-40 rounded-md mb-4 bg-gradient-to-br from-black via-[#111] to-[#221] flex items-center justify-center">
+            <img src="assets/dublador.jpeg" alt="Convidado" class="w-full h-full object-cover rounded-md"/>
+          </div>
+          <h3 class="font-bold ff-orbit text-lg group-hover:text-orange-300">Tania Gaidarji</h3>
+          <p class="text-sm text-gray-300">Dubladora</p>
+          <div class="mt-3 flex items-center justify-between">
+            <span class="text-xs text-gray-400">Domingo • 15:00</span>
+            <!-- <a href="#programacao" class="text-sm font-semibold">Ver</a> -->
+          </div>
+        </article>
+
+        <article class="p-4 rounded-xl card-glow reveal group">
+          <div class="h-40 rounded-md mb-4 bg-gradient-to-br from-black via-[#111] to-[#221] flex items-center justify-center">
+            <img src="assets/cosplay.jpg" alt="Cosplay" class="w-full h-full object-cover rounded-md"/>
+          </div>
+          <h3 class="font-bold ff-orbit text-lg group-hover:text-orange-300">Concurso de Cosplay</h3>
+          <p class="text-sm text-gray-300">Categorias: adulto com Prêmios em dinheiro; Cosplay infantil e Cospobre</p>
+          <div class="mt-3 flex items-center justify-between">
+            <span class="text-xs text-gray-400">Domingo • 14:00</span>
+            <a href="#ingressos" class="text-sm font-semibold">Inscreva-se</a>
+          </div>
+        </article>
+
+        <article class="p-4 rounded-xl card-glow reveal group">
+          <div class="h-40 rounded-md mb-4 bg-gradient-to-br from-black via-[#111] to-[#221] flex items-center justify-center">
+            <img src="assets/loja.jpeg" alt="Quadrinhos" class="w-full h-full object-cover rounded-md"/>
+          </div>
+          <h3 class="font-bold ff-orbit text-lg group-hover:text-orange-300">Feira Geek</h3>
+          <p class="text-sm text-gray-300">Lojas com artigos exclusivos na área gamer e geek.</p>
+          <div class="mt-3 flex items-center justify-between">
+            <span class="text-xs text-gray-400">Todos os dias</span>
+            <!-- <a href="#contato" class="text-sm font-semibold">Ver</a> -->
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- PROGRAMAÇÃO -->
+    <section id="programacao" class="py-12 bg-[linear-gradient(180deg,transparent,rgba(255,255,255,0.01))]">
+      <div class="max-w-6xl mx-auto px-6 lg:px-8">
+        <h2 class="text-3xl ff-orbit font-extrabold mb-6 reveal">Programação</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="p-4 rounded-xl card-glow reveal">
+            <div class="flex items-center justify-between mb-4">
+              <div>
+                <div class="text-sm text-gray-400">Sexta</div>
+                <div class="text-xl font-bold">24 Outubro</div>
+              </div>
+              <div class="text-xs px-2 py-1 rounded-md bg-orange-500 text-black ff-orbit">Dia 1</div>
+            </div>
+            <ul class="space-y-3 text-sm text-gray-300">
+              <li>Touro Mecânico</li>
+              <li>Bate Papo</li>
+              <li>K-POP</li>
+              <li>Desfile de Cospobre</li>
+              <li>Palestras</li>
+              <li>Torneios vídeo game</li>
+              <li>Desfile de Cosplay</li>
+              <li>Concurso de Cosplay – com premiação em dinheiro</li>
+              <li>Arena VR</li>
+              <li>Swordplay – com torneio</li>
+              <li>Equipe de E-Sportes eletrônicos</li>
+              <li>Fliperama</li>
+              <li>Jogos de tabuleiro  - com torneio</li>
+              </li>Jogos eletrônicos –JustDance, playstations</li>
+              </li>Kararokê</li>
+              <li>Randon Dance</li>
+              <li>Feira Geek</li>
+              <li>Art´s Alive</li>
+            </ul>
+          </div>
+
+          <div class="p-4 rounded-xl card-glow reveal">
+            <div class="flex items-center justify-between mb-4">
+              <div>
+                <div class="text-sm text-gray-400">Sábado</div>
+                <div class="text-xl font-bold">25 Outubro</div>
+              </div>
+              <div class="text-xs px-2 py-1 rounded-md bg-[#FFB347] text-black ff-orbit">Dia 2</div>
+            </div>
+            <ul class="space-y-3 text-sm text-gray-300">
+              <li>Palestra show + fotos e bate-papo com o dublador  Leonardo Camillo</li>
+              <li>Touro Mecânico</li>
+              <li>Torneios de Card Game</li>
+              <li>Bate Papo</li>
+              <li>K-POP</li>
+              <li>Desfile de Cospobre</li>
+              <li>Palestras</li>
+              <li>Torneios vídeo game</li>
+              <li>Desfile de Cosplay, com premiação em dinheiro</li>
+              <li>Arena VR</li>
+              <li>Swordplay</li>
+              <li>Equipe de E-Sportes eletrônicos</li>
+              </li>Fliperama</li>
+              <li>Jogos de tabuleiro</li>
+              <li>Jogos eletrônicos</li>
+              <li>JustDance, playstations</li>
+              <li>Kararokê</li>
+              <li>Randon Dance</li>
+              <li>Feira Geek</li>
+              <li>Art´s Alive</li>
+            </ul>
+          </div>
+
+          <div class="p-4 rounded-xl card-glow reveal">
+            <div class="flex items-center justify-between mb-4">
+              <div>
+                <div class="text-sm text-gray-400">Domingo</div>
+                <div class="text-xl font-bold">26 Outubro</div>
+              </div>
+              <div class="text-xs px-2 py-1 rounded-md bg-[#FFD66B] text-black ff-orbit">Dia 3</div>
+            </div>
+            <ul class="space-y-3 text-sm text-gray-300">
+              <li>Palestra show + fotos e bate-papo com o dublador  Tânia Gaidarji</li>
+              <li>Show da Banda Shinigami</li>
+              <li>Touro Mecânico</li>
+              <li>Bate Papo</li>
+              <li>K-POP</li>
+              <li>Desfile de Cospobre</li>
+              <li>Palestras</li>
+              <li>Torneios vídeo game</li>
+              <li>Desfile de Cosplay</li>
+              <li>Concurso de Cosplay – com premiação em dinheiro</li>
+              <li>Arena VR</li>
+              <li>Swordplay – com torneio</li>
+              <li>Equipe de E-Sportes eletrônicos</li>
+              <li>Fliperama</li>
+              <li>Jogos de tabuleiro  - com torneio</li>
+              </li>Jogos eletrônicos –JustDance, playstations</li>
+              </li>Kararokê</li>
+              <li>Randon Dance</li>
+              <li>Feira Geek</li>
+              <li>Art´s Alive</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INGRESSOS -->
+    <section id="ingressos" class="max-w-6xl mx-auto px-6 lg:px-8 py-12">
+      <h2 class="text-3xl ff-orbit font-extrabold mb-3 reveal">Ingressos</h2>
+
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+        <div class="p-4 rounded-xl card-glow text-center reveal">
+          <div class="text-3xl font-bold neon text-orange-400">Sabado dia 24/10</div>
+          <div class="text-3xl font-bold ff-orbit mt-2">Reservado para Escolas</div>
+          <div class="mt-3 text-sm text-gray-400">Acesso 1 dia</div>
+          <a href="https://eventos.sescpe.com.br/girageek2025/" target="_blank" class="mt-4 inline-block px-4 py-2 rounded-md font-bold" style="background:var(--orange); color:#080808;">Comprar Ingresso</a>
+        </div>
+
+        <div class="p-4 rounded-xl card-glow text-center reveal">
+          <div class="text-3xl font-bold neon text-orange-400">Sábado dia 25/10</div>
+          <div class="text-1xl font-bold ff-orbit mt-2">Inteira R$50 <br> Social R$30 + 1kg alimento <br> Meia R$25 <br> Comerciário R$25
+          </div>
+          <div class="mt-3 text-sm text-gray-300">Acesso 1 dia</div>
+          <a href="https://eventos.sescpe.com.br/girageek2025/" target="_blank" class="mt-4 inline-block px-4 py-2 rounded-md font-bold" style="background:var(--orange); color:#080808;">Comprar Ingresso</a>
+        </div>
+
+        <div class="p-4 rounded-xl card-glow text-center reveal">
+          <div class="text-3xl font-bold neon text-orange-400">Domingo dia 26/10</div>
+          <div class="text-1xl font-bold ff-orbit mt-2">Inteira R$50 <br> Social R$30 + 1kg alimento <br> Meia R$25 <br> Comerciário R$25
+          </div>
+          <div class="mt-3 text-sm text-gray-300">Acesso 1 dia</div>
+          <a href="https://eventos.sescpe.com.br/girageek2025/" target="_blank" class="mt-4 inline-block px-4 py-2 rounded-md font-bold" style="background:var(--orange); color:#080808;">Comprar Ingresso</a>
+        </div>
+      </div>
+    </section>
+
+     <!-- GALLERY -->
+    <section id="galeria" class="max-w-6xl mx-auto px-6 lg:px-8 py-12">
+      <h2 class="text-3xl ff-orbit font-extrabold mb-6 reveal">Galeria</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <img class="w-full h-36 object-cover rounded-md reveal cursor-pointer" src="assets/cosplay.jpg" alt="foto1" data-full="https://via.placeholder.com/1200x900.png?text=Foto+1"/>
+        <img class="w-full h-36 object-cover rounded-md reveal cursor-pointer" src="assets/gira2.jpeg" alt="foto2" data-full="https://via.placeholder.com/1200x900.png?text=Foto+2"/>
+        <img class="w-full h-36 object-cover rounded-md reveal cursor-pointer" src="assets/gira5.jpg" alt="foto4" data-full="https://via.placeholder.com/1200x900.png?text=Foto+4"/>
+    
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="py-12 bg-[linear-gradient(180deg,transparent,rgba(255,255,255,0.01))]">
+      <div class="max-w-6xl mx-auto px-6 lg:px-8">
+        <h2 class="text-3xl ff-orbit font-extrabold mb-6 reveal">FAQ</h2>
+
+        <div class="space-y-3">
+          <details class="p-4 rounded-xl card-glow" open>
+            <summary class="font-bold cursor-pointer">Onde será o evento?</summary>
+            <div class="mt-2 text-gray-300">No Centro Cultural SESC Garanhuns — endereço e informações de acesso no rodapé.</div>
+          </details>
+
+          <details class="p-4 rounded-xl card-glow">
+            <summary class="font-bold cursor-pointer">Posso levar comida?</summary>
+            <div class="mt-2 text-gray-300">Alimentos comprados dentro do evento são permitidos; verifique restrições de segurança para alimentos externos.</div>
+          </details>
+
+          <details class="p-4 rounded-xl card-glow">
+            <summary class="font-bold cursor-pointer">Há estacionamento?</summary>
+            <div class="mt-2 text-gray-300">Sim — estacionamento próximo ao local. Recomendamos chegar cedo em dias de maior movimento.</div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contato" class=" bg-[linear-gradient(180deg,transparent,rgba(255,255,255,0.01))]">
+      <div class="max-w-6xl mx-auto px-6 lg:px-8 gap-8">
+        <div class="reveal">
+          <h3 class="text-2xl ff-orbit font-extrabold mb-3">Contato & Redes</h3>
+          <p class="text-gray-300 mb-4">Fale conosco para credenciamento, expositores e parcerias.</p>
+          <ul class="space-y-2 text-gray-300">
+            <li><strong>Local:</strong> Centro Cultural SESC Garanhuns</li>
+            <li><strong>Telefone:</strong> (87) 3762-3154</li>
+            <li><strong>Email:</strong> ycafeitosa@sescpe.com.br</li>
+          </ul>
+          <div class="mt-4 flex items-center gap-3">
+            <a href="https://www.instagram.com/girageek_gus?igsh=MWdhZTlpZGRkc2pseA==" class="px-3 py-2 rounded-md border"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="mt-12 py-8 border-t border-white/5">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div class="text-sm text-gray-400">Feito por Nielson Lima &copy; Todos os direitos reservados</div>
+      <div class="text-sm text-gray-400 text-center md:text-left">
+        Endereço: R. Cônego Benígno Líra - Centro, Garanhuns - PE, 55290-000| (87) 3762-3154
+      </div>
+    </div>
+  </footer>
+
+  <!-- BACK TO TOP -->
+  <button id="toTop" title="Voltar ao topo" class="fixed bottom-8 right-6 p-3 rounded-full bg-orange-400 text-black shadow-lg">
+    ↑
+  </button>
+
+  <!-- LIGHTBOX -->
+  <div id="lightbox" class="fixed inset-0 bg-black/80 hidden items-center justify-center z-50">
+    <img id="lbImg" src="" alt="Full" class="max-w-4xl max-h-[90vh] rounded-md"/>
+    <button id="lbClose" class="absolute top-6 right-6 p-2 rounded-md bg-white/10">Fechar</button>
+  </div>
+
+  <canvas id="particles-bg"></canvas>
+
+  <!-- SCRIPTS -->
+  <script src="assets/script.js"></script>
+    
+</body>
+</html>
